@@ -95,6 +95,8 @@ publish.addEventListener("click", () => {
                     user: user.uid,
                     time: serverTimestamp(),
                 });
+                title.value="";
+                text.value="";
                 const Toast = Swal.mixin({
                     toast: true,
                     position: 'top-end',
@@ -106,12 +108,12 @@ publish.addEventListener("click", () => {
                         toast.addEventListener('mouseleave', Swal.resumeTimer)
                     }
                 })
-
                 Toast.fire({
                     icon: 'success',
                     title: "Blog Publish Successfuly"
                 })
-                console.log("Document written with ID: ", docRef.id);
+            
+             
             } catch (e) {
                 console.error("Error adding document: ", e);
                 const Toast = Swal.mixin({
