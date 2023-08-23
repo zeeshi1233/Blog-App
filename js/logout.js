@@ -22,21 +22,22 @@ function show(){
             });
             
         } else {
-        document.getElementById("adddata").style.display="none"
-        let div=document.getElementById("greet1");
-        var d = new Date();
-        var time = d.getHours();
-        if (time < 12) {
-           div.innerHTML="Good morning!"
-      
-        }
-        if (time > 12) {
-            div.innerHTML="<b>Good afternoon!</b>"
-     
-        }
-        if (time == 12) {
-            div.innerHTML="<b>Good Night!</b>"
-        }
+            var d = new Date();
+            var time = d.getHours();
+            var greeting = "";
+            
+            if (time >= 4 && time < 12) {
+                greeting = "Good morning!";
+            } else if (time >= 12 && time < 17) {
+                greeting = "Good afternoon!";
+            } else if (time >= 17 && time < 20) {
+                greeting = "Good evening!";
+            } else {
+                greeting = "Good night!";
+            }
+            
+            document.getElementById("adddata").style.display = "none";
+            document.getElementById("greet1").innerHTML = `<b>${greeting}</b>`;
         }
     });
 }
