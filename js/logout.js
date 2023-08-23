@@ -18,6 +18,7 @@ function show(){
             document.getElementById("logout").style.display="block"
             localStorage.setItem("userId",uid)
             console.log(uid);
+            flage=false;
                 });
             });
             
@@ -36,6 +37,10 @@ function show(){
                 greeting = "Good night!";
             }
             
+   if ( document.getElementById("uname").style.display="none") {
+    document.getElementById("login").style.display="flex";
+   }     
+           
             document.getElementById("adddata").style.display = "none";
             document.getElementById("greet1").innerHTML = `<b>${greeting}</b>`;
         }

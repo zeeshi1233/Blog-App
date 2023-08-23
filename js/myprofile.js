@@ -145,7 +145,6 @@ const unsubscribe = onSnapshot(q, (querySnapshot) => {
     return;
 }
 
-
 if(cities==oldPassword){
     if (password == newPassword) {
         updatePassword(user, newPassword).then(async() => {
