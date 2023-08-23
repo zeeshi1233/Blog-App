@@ -111,6 +111,8 @@ publish.addEventListener("click", () => {
                 Toast.fire({
                     icon: 'success',
                     title: "Blog Publish Successfuly"
+                }).then(()=>{
+                    location.reload();
                 })
             
              
